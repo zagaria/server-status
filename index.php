@@ -4,6 +4,10 @@ require_once("template.php");
 if (!file_exists("config.php"))
 {
   require_once("install.php");
+} elseif(isset($_GET['do'])){ // we can add other actions with $_GET['do'] later.
+    if($_GET['do'] == "subscriptions"){
+      require_once("subscriptions.php");
+    }
 }
 else{
 
@@ -19,6 +23,12 @@ if (isset($_GET['ajax']))
 }else if (isset($_GET['offset']))
 {
   $offset = $_GET['offset'];
+}
+
+if (isset($_GET['subscriber_logout'])){
+  setcookie('tg_user', '');
+	setcookie('referer', '', time() - 3600);
+  header('Location: index.php');
 }
 
 Template::render_header("Status");
