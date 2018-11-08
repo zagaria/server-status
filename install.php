@@ -191,11 +191,12 @@ if (!empty($message))
 		<div class="form-group clearfix">
 			<div class="col-sm-6"><label for="tgtoken"><?php echo _("Telegram bot API Token");?>: </label><input type="text" name="tgtoken" value="<?php echo ((isset($_POST['tgtoken']))?htmlspecialchars($_POST['tgtoken'], ENT_QUOTES):'');?>" id="tgtoken" placeholder="<?php echo _("Telegram Bot API Token");?>" class="form-control" required></div>
 			<div class="col-sm-6"><label for="tgbot"><?php echo _("Telegram Bot Username");?>: </label><input type="text" name="tgbot" value="<?php echo ((isset($_POST['tgbot']))?htmlspecialchars($_POST['tgbot'], ENT_QUOTES):'');?>" id="tgbot" placeholder="<?php echo _("Telegram Bot Username");?>" class="form-control" required></div>
+		</div>
+	</section>
 
+    <section class="install-section clearfix">
 		<h2><?php echo _("Privacy Policy");?></h2>
 		<summary><?php echo _("Since you are collection personal information, the GDPR forces you to have a privacy policy. Enter the details below.");?></summary>
-		<h2><?php echo _("Privacy Policy");?></h2>
-		<summary><?php echo _("Since you are collecting personal information, the GDPR needs you to have a privacy policy. Enter the details below.");?></summary>
 
 
 		<div class="form-group clearfix">
